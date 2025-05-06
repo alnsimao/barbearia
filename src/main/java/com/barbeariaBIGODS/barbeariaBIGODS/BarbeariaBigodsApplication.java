@@ -10,6 +10,8 @@ public class BarbeariaBigodsApplication {
 		SpringApplication.run(BarbeariaBigodsApplication.class, args);
 		
 		System.out.println("Salve");
+		System.out.println("Salve");
+
 	}
 
 }
