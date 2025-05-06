@@ -10,6 +10,7 @@ public class BarbeariaBigodsApplication {
 		SpringApplication.run(BarbeariaBigodsApplication.class, args);
 		
 		System.out.println("Primeiro teste!");
+		System.out.println("Segundo teste!");
 	}
 
 }
