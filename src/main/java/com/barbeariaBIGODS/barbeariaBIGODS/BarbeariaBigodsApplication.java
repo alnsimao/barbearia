@@ -9,9 +9,7 @@ public class BarbeariaBigodsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BarbeariaBigodsApplication.class, args);
 		
-		System.out.println("Salve");
-		System.out.println("Salve");
-
+		System.out.println("Opa!");
 	}
 
 }
