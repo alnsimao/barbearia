@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>BIGODS Barbearia</title>
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+  <title>BIGODS Barbearia</title>
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+
 <body>
-    <div class="overlay">
-        <header class="header">
-            <h1>BIGODS BARBEARIA</h1>
-            <p>Estilo. Tradição. Quebrada.</p>
-        </header>
-        <main class="content">
-            <a href="/agendamento" class="btn">Agende seu corte</a>
-        </main>
+
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="/img/logo_recortada.png" alt="Logo BIGODS Barbearia">
+    </a>
+
+    <ul class="navlist">
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Agendamentos</a></li>
+      <li><a href="#">Perfil</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+
+    <div class="right-content">
+      <a href="#" class="nav-btn">Entrar</a>
+      <div class="bx bx-menu" id="menu-icon"></div>
     </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h5 data-aos="fade-right" data-aos-duration="1400">Estilo. Tradição. Quebrada.</h5>
+      <h1 data-aos="zoom-in-left" data-aos-duration="1400" data-aos-delay="200">BIGODS BARBEARIA</h1>
+      <p data-aos="fade-right" data-aos-duration="1400" data-aos-delay="300">
+        Na BIGODS BARBEARIA, a quebrada é raiz e o estilo é de responsa. Nascemos em Itaquaquecetuba pra resgatar a tradição da barbearia de verdade, onde o corte é na régua, a conversa é sincera e o ambiente tem aquele clima de casa.
+        <br><br>
+        Aqui, cada cliente é parceiro. Do degradê no capricho ao bigode alinhado, a gente cuida do visual e valoriza a história. Porque mais que barbearia, somos ponto de encontro, resenha e respeito pela quebrada.
+      </p>
+      <div class="main-hero" data-aos="flip-down" data-aos-duration="1400" data-aos-delay="200">
+        <a href="#" class="btn">Agende seu Corte</a>
+      </div>
+    </div>
+
+    <div class="hero-img" data-aos="zoom-in" data-aos-duration="1400">
+      <img src="/img/poste_barbeiro.png" alt="Poste de Barbearia">
+    </div>
+  </section>
+
+  <div class="icons">
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="600"><i class="ri-whatsapp-line"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="700"><i class="ri-instagram-line"></i></a>
+    <a href="#" data-aos="fade-in" data-aos-duration="1400" data-aos-delay="800"><i class="ri-facebook-fill"></i></a>
+  </div>
+
+  <script>
+    let menu = document.querySelector('#menu-icon');
+    let navlist = document.querySelector('.navlist');
+
+    menu.onclick = () => {
+      menu.classList.toggle('bx-x');
+      navlist.classList.toggle('open');
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 1,
+    });
+  </script>
+
 </body>
 </html>
