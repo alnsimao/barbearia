@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | BIGODS</title>
+  <link rel="stylesheet" href="/css/login.css">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="login">
-        <h1>Login</h1>
-        <form action="/login" method="POST">
-            <label for="email">Digite seuEmail:</label>
-            <input type="text" name="email" placeholder="Email">
-            <label>Digite sua Senha:</label>
-            <input type="password" name="senha" placeholder="Senha">
-            <button type="submit" value="Login">
-        </form>
-    </div>
-    <h2>Não possui uma conta?</h2>
-    <button type="submit" value="cadastro"><a href="/cadastro.html">Cadastrar-se</a></button>
-</body>
+
+    <header class="header">
+        <a href="/home" class="logo" data-aos="fade-down" data-aos-duration="1000">
+            <img src="/img/logo_recortada.png" alt="Logo BIGODS">
+        </a>
+    </header>
+
+  <div class="login-container" data-aos="zoom-in" data-aos-duration="1200">
+    <form action="/login" method="POST">
+      <h1>Login</h1>
+
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="password" name="senha" placeholder="Senha" required>
+
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+
+    <p class="login-link">Não tem uma conta? <a href="/cadastro">Cadastre-se!</a></p>
+  </div>
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
