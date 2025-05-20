@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Cadastro | BIGODS</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <div class="cadastro">
-        <h1>Cadastro</h1>
+
+    <header class="header">
+        <a href="/home" class="logo" data-aos="fade-down" data-aos-duration="1000">
+            <img src="/img/logo_recortada.png" alt="Logo BIGODS">
+        </a>
+    </header>
+
+    <div class="cadastro-container" data-aos="zoom-in" data-aos-duration="1200">
+        <h1>Crie sua conta</h1>
         <form action="/cadastro" method="POST">
-            <label for="nome">Digite seu Nome:</label>
-            <input type="text" name="nome" placeholder="Nome">
-            <label>Digite seuEmail:</label>
-            <input type="text" name="email" placeholder="Email">
-            <label>Digite seu Telefone:</label>
-            <input type="number" name="telefone" placeholder="Telefone">
-            <label>Digite suaSenha:</label>
-            <input type="password" name="senha" placeholder="Senha">
-            <button type="submit" value="Cadastrar">
+            <input type="text" name="nome" placeholder="Nome completo" required>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <button type="submit" value="Cadastrar" class="btn">Cadastrar</button>
         </form>
+        <p class="login-link">Já tem uma conta? <a href="/login">Fazer login</a></p>        
     </div>
-    <h2>Conta cadastrada, faça seu agendamento!</h2>
-    <button type ="submit" value="agendamento"><a href="/agendamento.html">Agendar</a></button>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
