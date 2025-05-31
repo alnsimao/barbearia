@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agendamento | BIGODS</title>
+    <link rel="stylesheet" href="/css/agendamento.css">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="agendamento">
+
+    <header class="header">
+        <a href="/home" class="logo" data-aos="fade-down" data-aos-duration="1000">
+        <img src="/img/logo_recortada.png" alt="Logo BIGODS">
+        </a>
+    </header>
+
+    <div class="agendamento-container" data-aos="zoom-in" data-aos-duration="1200">
         <h1>Agendamento</h1>
         <form action="/agendamento" method="POST">
             <label for="nome">Digite seu Nome:</label>
@@ -17,9 +27,11 @@
             <input type="text" name="barbeiro" placeholder="Nome do barbeiro">
             <label>Escolha seu metódo de pagamento:</label>
             <input type="text" name="pagamento" placeholder="Metódo de pagamento">
-            <button type="submit" value="Agendar"></button>
-            
+            <button type="submit" class="btn">Agendar</button>            
         </form>
-        </div>
+    </div>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
