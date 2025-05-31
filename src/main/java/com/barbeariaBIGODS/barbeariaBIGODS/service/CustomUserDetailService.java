@@ -23,10 +23,13 @@ public class CustomUserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         ClienteModel cliente = clienteRepositorio.findByEmail(email);
         if (cliente == null) {
+        	System.out.println("DEBUG: Usuário com email '" + email + "' NÃO encontrado.");
             throw new UsernameNotFoundException("Usuário não encontrado com o e-mail: " + email);
+            
         }
         
         GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_CLIENTE");
+        System.out.println("DEBUG: Usuário com email '" + email + "' encontrado. Senha criptografada: " + cliente.getSenha());
         return new User(cliente.getEmail(), cliente.getSenha(), Collections.singletonList(authority));
     }
 }

@@ -10,5 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 	    public String login() {
 	        return "login"; 
 	    }
+	    @GetMapping("/agendamento")
+	    public String agendamentoPage() {
+	    	 System.out.println("Redirecionando para a página de agendamento.");
+	        return "agendamento"; 
+	    }
 	
 }

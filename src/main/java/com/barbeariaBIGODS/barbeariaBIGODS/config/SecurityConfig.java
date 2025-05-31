@@ -17,13 +17,19 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/", "/cadastro", "/login", "/css/**", "/js/**").permitAll() // ROTAS PÚBLICAS
+                .requestMatchers("/", "/cadastro", "/login", "/css/**", "/js/**").permitAll() 
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
                 .loginPage("/login").permitAll()
+                .defaultSuccessUrl("/agendamento", true)
+                .permitAll()
+
             )
-            .logout(logout -> logout.permitAll());
+            .logout(logout -> logout
+        .logoutSuccessUrl("/")
+        .permitAll()
+        );
 
         return http.build();
     }
